@@ -5,20 +5,28 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
-var readFile = require('../departure.json')
+var readFile = require('../departure.json');
+
+headers = {
+    'Content-Type': 'application/json'
+   // 'Content-Length': dataString.length
+};
 router.get('/departure', function (req, res) {
-    var con = '';
+  /*  var con = '{ "departures": [';
+
     readFile.departures.forEach(function (item) {
-        con +=` <h1>${item.id}</h1>
-         <h1>${item.prn}</h1>
-        <h1>${item.flightno}</h1>
-       <h1>${item.src}</h1>
-        <h1>${item.dest}</h1>
-        <h1>${item.gate}</h1>
-        <h1>${item.etd}</h1>`;
+        con +=` {"id":"${item.id}",
+         "prn":"${item.prn}",
+        "flightno":"${item.flightno}",
+         "item":"${item.src}",
+        "dest":"${item.dest}",
+        "gate":"${item.gate}",
+        "etd":"${item.etd}"}`;
 
     })
-
-    res.send(`${con}`);
+   // con=JSON.parse(con);
+    con+=']}';
+   // res.send(`${con}`);*/
+    res.json(readFile);
 });
 module.exports = router;
