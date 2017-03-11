@@ -1,0 +1,13 @@
+{
+  "departures": [{
+    "id": 271046927,
+    "prn": "323234",
+    "flightno": "13132",
+    "src": "mumbai",
+    "dest": "delhi",
+    "gate": "5",
+    "etd": "12.30",
+    "delayed":""
+  }
+  ]
+}

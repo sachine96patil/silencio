@@ -1,0 +1,13 @@
+{
+  "offers": [{
+    "offerId": 344042327,
+    "Cname": "Dominos",
+    "product": "large pizaa",
+    "offer":"30% off on price",
+    "price": "350",
+    "link": "http://offers.dominos.com",
+    "active": true,
+    "image":""
+  }
+    ]
+}
