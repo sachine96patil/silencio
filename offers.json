@@ -1,7 +1,7 @@
 {
   "offers": [{
     "offerId": 344042327,
-    "Cname": "Dominos",
+    "name": "Dominos",
     "product": "large pizaa",
     "offer":"30% off on price",
     "price": "350",

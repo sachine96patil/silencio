@@ -6,7 +6,8 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 var readFile = require('../departure.json');
-
+var arrivaldata=require('../arrival.json');
+var offerdata=require('../offers.json');
 headers = {
     'Content-Type': 'application/json'
    // 'Content-Length': dataString.length
@@ -28,5 +29,13 @@ router.get('/departure', function (req, res) {
     con+=']}';
    // res.send(`${con}`);*/
     res.json(readFile);
+});
+
+router.get('/arrival',function(req,res){
+    res.json(arrivaldata);
+});
+
+router.get('/offers',function(req,res){
+    res.json(offerdata);
 });
 module.exports = router;

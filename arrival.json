@@ -1,22 +1,22 @@
 {
-  "departures": [{
+  "arrival": [{
     "id": 1,
     "prn": "323234",
     "flightno": "13132",
     "src": "mumbai",
     "dest": "delhi",
     "gate": "5",
-    "etd": "1230",
+    "etd": "2130",
     "delayed":""
   },
     {
       "id": 2,
-      "prn": "3553",
-      "flightno": "131A32",
-      "src": "kolkata",
-      "dest": "delhi",
+      "prn": "3435A",
+      "flightno": "13132",
+      "src": "bangalore",
+      "dest": "kerala",
       "gate": "5",
-      "etd": "1430",
+      "etd": "1230",
       "delayed":""
     }
   ]
