@@ -4,6 +4,8 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var restful=require('node-restful');
+var mongoose=restful.mongoose;
 
 var index = require('./routes/index');
 var users = require('./routes/users');
@@ -18,14 +20,21 @@ app.set('view engine', 'ejs');
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json({type:'application/vnd.api+json'}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+//app.use(express.static(__dirname + '/views'));
 
 app.use('/', index);
 app.use('/users', users);
 app.use('/departure', users);
 app.use('/arrival', users);
 app.use('/offers', users);
+app.use('/resources', users);
+app.use('/AdminPanelArrival',users);
+app.use('/AdminPanelDeparture',users);
+app.use('/Offers',users);
 //app.use(express.static('departure/public'));
 
 

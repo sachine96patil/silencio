@@ -1,0 +1,61 @@
+<!Doctype html>
+    <html>
+        <head>
+            <meta charset="utf-8">
+            <title>Arrival</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+            <link href="public/stylesheets/Style.css" rel="stylesheet" type="text/css">
+        </head>
+        <body>
+            <nav class="navbar navbar-inverse navbar-fixed-top" style="background-color:#800040;">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a><img id="img1" src="logo.png" alt="Silencio" class="img-responsive"></a>
+                    </div>
+                </div>
+            </nav>
+
+            <div>
+                <img id="img2" src="public/images/arrivalIcon.png" alt="arrival" class="img-responsive">
+                <h1 class="h1 text-center text-primary heading">Submit a Response</h1>
+            </div>
+            <div class="container-fluid">
+                <form>
+                    <div class="well container-fluid">
+                        <div class=form-group>
+                            <label for="pnr"></label>
+                            <input type="text" id="pnr" class="form-control" placeholder="PNR Number" required>
+                        </div>
+                        <div class=form-group>
+                            <label for="fnum"></label>
+                            <input type="text" id="fnum" class="form-control" placeholder="Flight Number" required>
+                        </div>
+                        <div class=form-group>
+                            <label for="src"></label>
+                            <input type="text" id="src" class="form-control" placeholder="Source" required>
+                        </div>
+                        <div class=form-group>
+                            <label for="dest"></label>
+                            <input type="text" id="dest" class="form-control" placeholder="Destination" required>
+                        </div>
+                        <div class=form-group>
+                            <label for="eta"></label>
+                            <input type="text" id="eta" class="form-control" placeholder="Expected Time of Arrival" required>
+                        </div>
+                        <div class=form-group>
+                            <label for="delay"></label>
+                            <input type="text" id="delay" class="form-control" placeholder="Delayed By" required>
+                        </div>
+                        <div class=form-group>
+                            <label for="gate"></label>
+                            <input type="text" id="gate" class="form-control" placeholder="Gate Number" required>
+                        </div>
+                        <button type="submit" class="col-xs-6 btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </body>
+    </html>
