@@ -5,11 +5,14 @@ var restful=require('node-restful');
 var app=express();
  var mongoose=restful.mongoose;
 //Set up mongoose connection
-//var mongoose = require('mongoose');
-var mongoDB = 'mongodb://sachinepatil:pass#mongo#96@ds129030.mlab.com:29030/silencio';
+var mongoose = require('mongoose');
+var mongoDB = 'mongodb://db-username:db-password@ds129030.mlab.com:29030/silencio';
 mongoose.connect(mongoDB);
+
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+
+db.on('connected', console.error.bind(console, 'MongoDB connection successful'));
 
 var Resource = app.resource = restful.model('resource', mongoose.Schema({
     title: String,

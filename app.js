@@ -5,7 +5,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var restful=require('node-restful');
-var mongoose=restful.mongoose;
+//var mongoose=restful.mongoose;
 
 var index = require('./routes/index');
 var users = require('./routes/users');
