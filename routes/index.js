@@ -5,11 +5,14 @@ var restful=require('node-restful');
 var app=express();
  var mongoose=restful.mongoose;
 //Set up mongoose connection
-//var mongoose = require('mongoose');
-var mongoDB = 'mongodb://sachinepatil:pass#mongo#96@ds129030.mlab.com:29030/silencio';
+var mongoose = require('mongoose');
+var mongoDB = 'mongodb://db-username:db-password@ds129030.mlab.com:29030/silencio';
 mongoose.connect(mongoDB);
+
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+
+db.on('connected', console.error.bind(console, 'MongoDB connection successful'));
 
 var Resource = app.resource = restful.model('resource', mongoose.Schema({
     title: String,
@@ -73,4 +76,37 @@ res.render('departure');
 router.get('/Offer',function(req,res){
     res.render('Offers');
 });
+
+
+//Handling all the Post Requests here
+router.post('/arrival', function(req, res) {
+    console.log(req);
+    console.log('Request received');
+    res.redirect('/'); //This should be there so as to send a OK, Form Submitted Code.
+});
+router.post('/departure', function(req, res) {
+    console.log(req);
+    console.log('Request received');
+    res.redirect('/'); //This should be there so as to send a OK, Form Submitted Code.
+});
+router.post('/offers', function(req, res) {
+    console.log(req);
+    console.log('Request received');
+    res.redirect('/'); //This should be there so as to send a OK, Form Submitted Code.
+});
+router.post('/AdminPanelArrival', function(req, res) {
+    console.log(req);
+    console.log('Request received');
+    res.redirect('/'); //This should be there so as to send a OK, Form Submitted Code.
+});
+router.post('/AdminPanelDeparture', function(req, res) {
+    console.log(req);
+    console.log('Request received');
+    res.redirect('/'); //This should be there so as to send a OK, Form Submitted Code.
+});
+
+router.post('/Offer',function(req,res){
+    res.render('Offers');
+});
+
 module.exports = router;
