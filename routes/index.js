@@ -76,4 +76,37 @@ res.render('departure');
 router.get('/Offer',function(req,res){
     res.render('Offers');
 });
+
+
+//Handling all the Post Requests here
+router.post('/arrival', function(req, res) {
+    console.log(req);
+    console.log('Request received');
+    res.redirect('/'); //This should be there so as to send a OK, Form Submitted Code.
+});
+router.post('/departure', function(req, res) {
+    console.log(req);
+    console.log('Request received');
+    res.redirect('/'); //This should be there so as to send a OK, Form Submitted Code.
+});
+router.post('/offers', function(req, res) {
+    console.log(req);
+    console.log('Request received');
+    res.redirect('/'); //This should be there so as to send a OK, Form Submitted Code.
+});
+router.post('/AdminPanelArrival', function(req, res) {
+    console.log(req);
+    console.log('Request received');
+    res.redirect('/'); //This should be there so as to send a OK, Form Submitted Code.
+});
+router.post('/AdminPanelDeparture', function(req, res) {
+    console.log(req);
+    console.log('Request received');
+    res.redirect('/'); //This should be there so as to send a OK, Form Submitted Code.
+});
+
+router.post('/Offer',function(req,res){
+    res.render('Offers');
+});
+
 module.exports = router;
